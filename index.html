@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Enzo Masullo</title>
+    <link rel="icon" href="imagem/laptop-code-solid1.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones FontAwesome para redes sociais -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header>
+       <a href="#hero" style="text-decoration: none;"> <div class="logo"> Enzo Masullo </div></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#projetos">Projetos Web</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><button id="theme-toggle" class="btn-theme">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal / Banner -->
+    <!-- SEÇÃO PRINCIPAL / HERO MODIFICADA COM FOTO -->
+    <section class="hero">
+        <div class="hero-container">
+            
+            <!-- Nova Coluna 1: A Imagem -->
+            <div class="hero-image-container">
+                <img src="minha-foto.jpg" alt="Foto de [Seu Nome]" class="minha-foto-perfil">
+            </div>
+
+            <!-- Nova Coluna 2: O Texto (seu conteúdo atual) -->
+            <div class="hero-content">
+                <h1>Olá, eu sou <span>[Seu Nome Completo]</span></h1>
+                <h2>Auxiliar Administrativo & Desenvolvedor Web</h2>
+                <p>Unindo organização de processos, gestão de dados e soluções tecnológicas eficientes para a web.</p>
+                <a href="#contato" class="btn">Entre em Contato</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="section">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-container">
+            <div class="sobre-texto">
+                <p>
+                    [Escreva um breve resumo sobre você. Exemplo: Sou um profissional versátil que combina o rigor e a organização da rotina administrativa com a criatividade e a lógica do desenvolvimento web. Busco constantemente otimizar processos e criar soluções funcionais.]
+                </p>
+                <p>
+                    <strong>Objetivo Profissional:</strong> [Digite seu objetivo principal aqui, ex: Atuar em rotinas administrativas integrando automações e desenvolvimento de páginas web.]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section bg-light">
+        <h2>Habilidades</h2>
+        <div class="habilidades-grid">
+            
+            <!-- Habilidades Administrativas -->
+            <div class="card-habilidade">
+                <h3><i class="fas fa-briefcase"></i> Área Administrativa</h3>
+                <ul>
+                    <li>Gestão de Documentos e Arquivos</li>
+                    <li>Pacote Office (Word, Excel Avançado, PowerPoint)</li>
+                    <li>Atendimento ao Cliente e Suporte</li>
+                    <li>Organização de Fluxos de Trabalho</li>
+                    <li>Controle de Planilhas e Relatórios</li>
+                </ul>
+            </div>
+
+            <!-- Habilidades de Desenvolvimento Web -->
+            <div class="card-habilidade">
+                <h3><i class="fas fa-code"></i> Desenvolvimento Web</h3>
+                <ul>
+                    <li>HTML5 & CSS3 (Layouts Responsivos)</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Git & GitHub (Controle de Versão)</li>
+                    <li>Bootstrap / CSS Grid / Flexbox</li>
+                    <li>Noções de UX/UI Design</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experiência / Formação -->
+    <section id="experiencia" class="section">
+        <h2>Experiência & Formação</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <h3>Estagiário na Inteligência Comercial / Experiência Profissional </h3>
+                <span class="data">Agosto/2025 - Novembro/2025</span>
+                <p>Atuei na área de Inteligência Comercial com pesquisas e análises de concorrentes para apoio a decisões estratégicas. Elaborei relatórios com auxílio de IAs, gerando insights para diversas demandas, além de criar e precificar planilhas em Excel com fórmulas para otimização de processos. Também participei do desenvolvimento front-end de uma plataforma SaaS, com foco na melhoria da experiência do usuário. </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Curso / Crie um site simples usando HTML, CSS e JS</h3>
+                <span class="data">4 horas - 2025</span>
+                <p>Fundação Bradesco - Foco em criação de sites, estruturas web e lógica de programação.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Curso / Crie um site simples usando HTML, CSS e JS</h3>
+                <span class="data">4 horas - 2025</span>
+                <p>Fundação Bradesco - Foco em criação de sites, estruturas web e lógica de programação.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Ensino Médio Técnico</h3>
+                <span class="data">2023 - 2025</span>
+                <p>Escola Estadual de Ensino Profissionalizante Professor Onélio Porto</p>
+                <p><b>Curso Técnico em Desenvolvimento de Sistemas</b></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projetos Web -->
+    <section id="projetos" class="section bg-light">
+        <h2>Projetos Web & Automações</h2>
+        <div class="projetos-grid">
+
+            <div class="card-projeto">
+                <h3>[Nome do Projeto 1]</h3>
+                <p>[Descrição curta do projeto. Ex: Landing page responsiva para uma empresa local com formulário de contato.]</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="projeto-links">
+                    <a href="[Link do GitHub]" target="_blank">GitHub</a>
+                    <a href="[Link do Projeto Online]" target="_blank">Ver Demo</a>
+                </div>
+            </div>
+
+            <div class="card-projeto">
+                <h3>[Nome do Projeto 2]</h3>
+                <p>[Ex: Planilha automatizada de controle financeiro integrada a uma interface web simples.]</p>
+                <div class="tags">
+                    <span>Excel</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="projeto-links">
+                    <a href="[Link do GitHub]" target="_blank">GitHub</a>
+                    <a href="[Link do Projeto Online]" target="_blank">Ver Demo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <div class="contato-container">
+            <p>Estou disponível para novas oportunidades e projetos. Entre em contato comigo!</p>
+            
+            <div class="info-contato">
+                <p><strong>E-mail:</strong> Enzomasullogf@gmail.com</p>
+                <p><strong>Telefone/WhatsApp:</strong> (85) 99992-8365</p>
+                <p><strong>Localização:</strong> Fortaleza - Ce</p>
+            </div>
+
+            <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/enzo-masullo-22171834b/" target="_blank">LinkedIn</a>
+                <a href="[Link do seu GitHub]" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Enzo Gabriel Farias Masullo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

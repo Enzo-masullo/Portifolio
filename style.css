@@ -1,0 +1,387 @@
+/* Configurações Gerais */
+
+/* Aplica a transição suave de background e cor nos elementos */
+body, 
+header, 
+.section, 
+.card-habilidade, 
+.card-projeto, 
+.timeline-item {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+:root {
+    --bg-primary: #f9f9f9;      /* Fundo principal da página */
+    --bg-secondary: #ffffff;    /* Fundo dos cartões e seções */
+    --bg-header: #1e293b;       /* Fundo do cabeçalho */
+    --text-primary: #333333;    /* Cor do texto principal */
+    --text-title: #0f172a;      /* Cor dos títulos */
+    --accent-color: #0284c7;    /* Cor dos detalhes e links */
+}
+
+body.dark-mode {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-header: #020617;
+    --text-primary: #cbd5e1;
+    --text-title: #f8fafc;
+    --accent-color: #38bdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color:var(--bg-header);
+    color: var(--bg-secondary);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.btn-theme {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg,#38bdf8,#0284c7,#64748b,#38bdf8);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.3s;
+    animation: gradiente 4s ease infinite;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+
+    100% {
+        background-position: 0% center;
+    }
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Seções Gerais */
+.section {
+    padding: 80px 10% 60px 10%;
+}
+
+.bg-light {
+    background-color: var(--bg-secondary);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-title);
+    font-size: 2rem;
+}
+
+/* Banner / Hero */
+/* ================================================= */
+/* NOVA ESTILIZAÇÃO DA SEÇÃO HERO (COM FOTO)      */
+/* ================================================= */
+
+.hero {
+    min-height: 100vh; /* Mantém a altura total da tela */
+    background: linear-gradient(135deg, var(--bg-header), var(--bg-primary));
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5% 50px 5%; /* Adiciona espaço para o header fixo */
+}
+
+/* Contêiner Flexbox para colocar foto e texto lado a lado */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; /* Espaço entre a foto e o texto */
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Coluna da Imagem */
+.hero-image-container {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização da foto propriamente dita */
+.minha-foto-perfil {
+    width: 300px; /* Tamanho da foto em telas grandes */
+    height: 300px; /* Deve ser igual à largura para manter o círculo */
+    border-radius: 50%; /* Faz a foto ficar redonda */
+    object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+    border: 5px solid var(--accent-color); /* Adiciona uma borda na cor do destaque */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.minha-foto-perfil:hover {
+    transform: scale(1.05); /* A foto cresce levemente ao passar o mouse */
+}
+
+/* Coluna do Texto */
+.hero-content {
+    flex: 1; /* Ocupa a outra metade */
+    text-align: left; /* Alinha o texto à esquerda em telas grandes */
+}
+
+/* Mantendo os estilos de texto anteriores */
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: var(--text-title);
+}
+
+.hero-content h1 span {
+    color: var(--accent-color);
+}
+
+.hero-content h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* RESPONSIVIDADE PARA CELULAR (Mobile) */
+/* Quando a tela for menor que 768px, empilhamos os elementos */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Foto embaixo, texto em cima no mobile */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .minha-foto-perfil {
+        width: 200px; /* Foto menor no mobile */
+        height: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #38bdf8;
+    color: var(--text-title);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0284c7;
+    color: var(--bg-secondary);
+}
+
+/* Habilidades */
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-habilidade {
+    background: var(--bg-primary);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-habilidade h3 {
+    margin-bottom: 15px;
+    color: #0284c7;
+}
+
+.card-habilidade ul {
+    list-style-position: inside;
+}
+
+.card-habilidade li {
+    margin-bottom: 8px;
+}
+
+/* Experiência / Linha do tempo */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-left: 4px solid #38bdf8;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);}
+
+.timeline-item h3 {
+    color: var(--text-title);
+}
+
+.timeline-item .data {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-projeto {
+    background: var(--bg-primary);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-projeto h3 {
+    margin-bottom: 10px;
+    color: var(--text-title);
+}
+
+.tags {
+    margin: 15px 0;
+}
+
+.tags span {
+    background: #e2e8f0;
+    color: #334155;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.projeto-links a {
+    margin-right: 15px;
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contato e Rodapé */
+.contato-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-contato {
+    margin: 20px 0;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #0284c7;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    color: #828891;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
