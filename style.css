@@ -165,8 +165,8 @@ h2 {
 
 /* Estilização da foto propriamente dita */
 .minha-foto-perfil {
-    width: 300px; /* Tamanho da foto em telas grandes */
-    height: 300px; /* Deve ser igual à largura para manter o círculo */
+    width: 400px; /* Tamanho da foto em telas grandes */
+    height: 400px; /* Deve ser igual à largura para manter o círculo */
     border-radius: 50%; /* Faz a foto ficar redonda */
     object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
     border: 5px solid var(--accent-color); /* Adiciona uma borda na cor do destaque */
